@@ -29,13 +29,10 @@ import pandas as pd
 from time import time
 from IPython.display import display # Allows the use of display() for DataFrames
 
-# Import supplementary visualization code visuals.py
-import visuals as vs
-
-# Pretty display for notebooks
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 # Load the Census dataset
+from pygments.styles import vs
+
 data = pd.read_csv("census.csv")
 
 # Success - Display the first record
@@ -642,8 +639,4 @@ print("F-score on testing data: {:.4f}".format(fbeta_score(y_test, reduced_predi
 # ## Before You Submit
 # You will also need run the following in order to convert the Jupyter notebook into HTML, so that your submission will include both files.
 
-# In[33]:
-
-
-get_ipython().getoutput('jupyter nbconvert *.ipynb')
 
